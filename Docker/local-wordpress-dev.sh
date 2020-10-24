@@ -15,6 +15,7 @@ services:
     restart: always
     volumes:
       - db_data:/var/lib/mysql
+      - ./upload.ini:/usr/local/etc/php/conf.d/uploads.ini
     environment:
       MYSQL_ROOT_PASSWORD: $SQL_ROOT_PASS
       MYSQL_DATABASE: wordpress
