@@ -59,3 +59,8 @@ volumes:
   db_data:
 EOF
 docker-compose up -d
+
+echo "* You still need to setup wordpress at http://localhost " 
+echo "* You should edit wp-config.php to add new salts, define('FS_METHOD','direct'); , and configure debugging options"
+echo "* While there ensure permissions are correct using something like chown -R www-data:www-data wp-content/plugins"
+
